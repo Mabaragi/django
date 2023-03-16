@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>계산결과</h1>
+  
+    <p>{{first}} + {{second}} = {{first|add:second}}</p>
+    <p>{{first}} * {{second}} = {{product}}</p>
+    <p>{{first}} - {{second}} = {{minus}}</p>
+    {% if flag %}
+    <p>{{first}} / {{second}} = {{divide}}</p>
+    {% else %}
+    <p>계산할 수 없습니다.</p>
+    {% endif %}
+  
+  <a href="{% url 'calculators:calculation' %}"> 돌아가기! </a>
+{% endblock content %}
