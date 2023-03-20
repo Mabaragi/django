@@ -4,3 +4,4 @@ from django.db import models
 class Movie(models.Model):
     title = models.CharField(max_length=50)
     genre = models.CharField(max_length=10)
+    director = models.CharField(max_length=20, default='Unknown')
